@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-ink-950 text-slate-200 antialiased;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-white/[0.07] bg-ink-900/70 backdrop-blur;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-electric to-teal-brand px-6 py-3 text-sm font-semibold text-ink-950 shadow-glow transition hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-glow focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950 disabled:cursor-not-allowed disabled:opacity-40;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-medium text-slate-200 transition hover:border-cyan-glow/40 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-glow;
+  }
+  .field {
+    @apply w-full rounded-xl border border-white/10 bg-ink-800/80 px-4 py-3 text-base text-white placeholder:text-slate-500 transition focus:border-cyan-glow/60 focus:outline-none focus:ring-2 focus:ring-cyan-glow/20;
+  }
+  .label {
+    @apply mb-2 block text-sm font-medium text-slate-200;
+  }
+  .hint {
+    @apply mt-1.5 text-xs text-slate-400;
+  }
+  .glow-bg {
+    background:
+      radial-gradient(60% 50% at 50% 0%, rgba(0, 229, 255, 0.14), transparent 70%),
+      radial-gradient(40% 40% at 90% 30%, rgba(20, 184, 166, 0.12), transparent 70%);
+  }
+}
+
+/* Impresión / PDF: fondo blanco y texto oscuro */
+@media print {
+  @page {
+    margin: 14mm;
+  }
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff !important;
+    color: #0f172a !important;
+  }
+  .print-plain,
+  .print-plain * {
+    background: transparent !important;
+    color: #0f172a !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+  .print-plain .print-accent {
+    color: #0e7490 !important;
+  }
+  .print-plain .print-bar {
+    background: #0e7490 !important;
+  }
+  .print-plain .print-bar-muted {
+    background: #94a3b8 !important;
+  }
+  .break-avoid {
+    break-inside: avoid;
+  }
+}
