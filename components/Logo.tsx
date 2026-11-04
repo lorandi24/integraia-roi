@@ -14,10 +14,10 @@ export default function Logo({ className = "" }: { className?: string }) {
         <Image
           src={`/${LOGO_FILE}`}
           alt="IntegraIA by EMET"
-          width={36}
-          height={36}
+          width={40}
+          height={40}
           priority
-          className="h-9 w-9 rounded-lg object-contain"
+          className="h-10 w-10 object-contain drop-shadow-[0_0_10px_rgba(34,211,238,0.25)]"
         />
       ) : (
         <span

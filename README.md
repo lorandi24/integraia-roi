@@ -36,7 +36,13 @@ npm run build && npm start
 
 ## Logo
 
-Coloca el archivo en `public/logo-integraia.png` (cuadrado, mínimo 72×72 px) y vuelve a compilar o desplegar. Si no existe, el encabezado muestra un placeholder punteado que dice “LOGO”.
+| Archivo | Uso |
+| --- | --- |
+| `public/logo-integraia.png` | Emblema (lobo + aro), 512×512 con fondo transparente. Encabezado. |
+| `public/logo-integraia-full.webp` | Logo completo con wordmark (WebP, ~85 KB). Portada. |
+| `app/icon.png`, `app/apple-icon.png` | Favicon e ícono de iOS (Next.js los detecta solos). |
+
+Para cambiarlo, reemplaza los archivos con los mismos nombres y vuelve a compilar. Si falta `logo-integraia.png`, el encabezado muestra un placeholder punteado que dice “LOGO”.
 
 ## Desplegar
 

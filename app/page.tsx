@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import logoFull from "@/public/logo-integraia-full.webp";
 
 const steps = [
   { n: "01", title: "Cuéntanos de tu negocio", text: "Giro, equipo y horas que hoy se van en tareas manuales." },
@@ -24,7 +26,15 @@ export default function Home() {
       />
 
       {/* Hero */}
-      <section className="relative mx-auto max-w-4xl px-4 pb-16 pt-16 text-center sm:px-6 sm:pt-24">
+      <section className="relative mx-auto max-w-4xl px-4 pb-16 pt-12 text-center sm:px-6 sm:pt-16">
+        <Image
+          src={logoFull}
+          alt="IntegraIA by EMET"
+          priority
+          placeholder="blur"
+          sizes="(min-width: 640px) 200px, 150px"
+          className="mx-auto mb-8 h-auto w-[150px] drop-shadow-[0_0_40px_rgba(34,211,238,0.25)] sm:w-[200px]"
+        />
         <span className="inline-flex items-center gap-2 rounded-full border border-cyan-glow/25 bg-cyan-glow/5 px-3 py-1 text-xs font-medium text-cyan-glow">
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-cyan-glow" />
           Gratis · 2 minutos · Sin registro
